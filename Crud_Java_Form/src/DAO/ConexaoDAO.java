@@ -1,12 +1,13 @@
+package DAO;
 
+
+
+import com.sun.jdi.connect.spi.Connection;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
-
-
-
-
-
-
 
 
 public class ConexaoDAO {
@@ -21,6 +22,7 @@ public class ConexaoDAO {
             String url = "jdbc:mysql://localhost:3306/bancoteste?user=root&password=";
           
             conn = DriverManager.getConnection(url);
+            
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
         
